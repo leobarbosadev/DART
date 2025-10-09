@@ -22,7 +22,7 @@ void main(){
     print('A soma de ${valor1} e ${valor2} = ${soma}');
     print('A subtracao de ${valor1} - ${valor2} = ${subtracao}');
     print('A multiplicacao de ${valor1} e ${valor2} = ${multiplicacao}');
-    print('A divisao de ${valor1} por ${valor2} = ${divisao}');
+    print('A divisao de ${valor1} por ${valor2} = ${divisao.toStringAsFixed(2)}');
     print('A divisao inteira de ${valor1} por ${valor2} = $divInteira');
     print('O resto da divisao de ${valor1} por ${valor2} = ${resto}');
     print('-' * 50);
