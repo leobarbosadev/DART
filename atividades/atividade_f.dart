@@ -12,7 +12,6 @@ void main(){
   int sucessor = numero  +1;
 
   print('-' * 50);
-  print('O antecessor de ${numero} é ${antecessor}');
-  print('O sucessor de ${numero} é ${sucessor}');
+  print('O número digitado foi ${numero}, seu antecessor é ${antecessor} e seu sucessor é ${sucessor}');
   print('-' * 50);
 }

@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main(){
-  stdout.write('Entre com uma frase!: ');
+  stdout.write('Entre com uma frase: ');
   String? frase = stdin.readLineSync();
 
   //Null Safety
