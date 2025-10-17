@@ -7,9 +7,9 @@ void main(){
   if(val != null && val.isNotEmpty){
     double valor = double.parse(val);
 
-    double reaLDolar = valor / 5.45;
-    double realEuro = valor / 6.35;
-    double realWons = valor * 260.7;
+    double reaLDolar = valor * 0.18;
+    double realEuro = valor * 0.16;
+    double realWons = valor * 260.36;
 
     print('-' * 50);
     print('Real em Dólar: ${reaLDolar.toStringAsFixed(2)}');
