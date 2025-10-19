@@ -69,7 +69,8 @@ void main(){
         print('Fora do intervalo de opções');
     }
   }else{
-    print('Valor em branco ou nulo');
+    print('-' * 50);
+    print('Valor em branco, digite um valor para calcular a área.');
   }
 
   
