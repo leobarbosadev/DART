@@ -7,6 +7,7 @@ void main(){
   stdout.write('Entre com o segundo valor: ');
   String? segundoVal = (stdin.readLineSync());
 
+  //Null Safety
   if(primeiroVal != null && primeiroVal.isNotEmpty && segundoVal !=null && segundoVal.isNotEmpty){
     int valor1 = int.parse(primeiroVal); //fazendo casting
     int valor2 = int.parse(segundoVal);

@@ -18,13 +18,14 @@ void main(){
   double jurosCompostos;
   double montanteFinal;
 
-  jurosSimples = capital * taxa * tempo;
+  jurosSimples = capital * taxa * tempo; //jurosSimples = capital * (1 + taxa * tempo) assim posso comentar a linha 22
   montanteFinal = capital + jurosSimples;
-
+  
   jurosCompostos = capital * pow((1 + taxa), tempo);
 
   print('');
   print('== JUROS SIMPLES ==');
+  // print('Um capital de R\$${capital} com uma taxa de juros de ${taxa * 100}% ao mês durante ${tempo} meses, no final terá R\$${jurosSimples.toStringAsFixed(2)}');
   print('Um capital de R\$${capital} com uma taxa de juros de ${taxa * 100}% ao mês durante ${tempo} meses, no final terá R\$${montanteFinal.toStringAsFixed(2)}');
   print('*' * 50);
   print('== JUROS COMPOSTOS ==');

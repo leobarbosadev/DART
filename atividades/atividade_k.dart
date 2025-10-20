@@ -17,7 +17,7 @@ void main(){
         stdout.write('Digite o valor do lado do quadrado: ');
         String? ladoQuadrado = stdin.readLineSync();
 
-        double ladoConvertido = double.parse(ladoQuadrado!);
+        double ladoConvertido = double.parse(ladoQuadrado!); // ladoQuadrado Null Safety
 
         resultado = pow(ladoConvertido, 2).toDouble();
 
