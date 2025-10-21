@@ -5,7 +5,7 @@ void main(){
   String? num = stdin.readLineSync();
 
   num = (num == null || num.isEmpty) ? 'Nenhum numero' : num;
-  double? numero = double.parse(num);
+  double numero = double.parse(num);
   
 
   double dobro = numero! * 2;

@@ -7,6 +7,7 @@ void main(){
   stdout.write('Entre com o segundo valor: ');
   String? v2 = stdin.readLineSync();
 
+  //Null Safety
   if(v1 != null && v1.isNotEmpty && v2 != null && v2.isNotEmpty){
     double valor1 = double.parse(v1);
     double valor2 = double.parse(v2);

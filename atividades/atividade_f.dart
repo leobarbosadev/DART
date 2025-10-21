@@ -5,6 +5,7 @@ void main(){
   stdout.write('Digite um número: ');
   String? num = stdin.readLineSync();
 
+  //Null Safety
   num = (num == null || num.isEmpty) ? 'Nenhum numero' : num;
   int numero = int.parse(num);
 

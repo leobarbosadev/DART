@@ -7,9 +7,12 @@ void main(){
     stdout.write('Ente com a ${i}ª nota: ');
     String? entrada = stdin.readLineSync();
   
+  //Null Safety
   if(entrada != null && entrada.isNotEmpty){
     double nota = double.parse(entrada);
         soma += nota;
+  }else{
+    print('Valores em branco, digite as notas para calcular a média!');
   }
   }
   double media = soma / 4;

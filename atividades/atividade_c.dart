@@ -5,6 +5,7 @@ void main(){
   stdout.write('Digite o ano do seu nascimento: ');
   String? ano = (stdin.readLineSync());
 
+  //Null Safety
   if(ano != null && ano.isNotEmpty){
     int anoNasc = int.parse(ano);
 
