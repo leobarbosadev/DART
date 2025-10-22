@@ -12,9 +12,9 @@ void main(){
 
   if(primeiroValor != null && primeiroValor.isNotEmpty && segundoValor != null && segundoValor.isNotEmpty && terceiroValor != null && terceiroValor.isNotEmpty){
     
-    int valorA = int.parse(primeiroValor!);
-    int valorB = int.parse(segundoValor!);
-    int valorC = int.parse(terceiroValor!);
+    int valorA = int.parse(primeiroValor);
+    int valorB = int.parse(segundoValor);
+    int valorC = int.parse(terceiroValor);
 
     //EM FORMA DE LISTA -array- (MAIS FÁCIL)
     // List<int> numerosInteiros = [valorA, valorB, valorC];

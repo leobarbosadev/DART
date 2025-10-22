@@ -10,7 +10,7 @@ void main(){
 
   stdout.write('Digite o tempo em meses: ');
   String? valorC = stdin.readLineSync();
-
+//REFAZER
   double capital = double.parse(valorA!);
   double taxa = double.parse(valorB!) / 100;
   int tempo = int.parse(valorC!);
