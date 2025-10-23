@@ -8,8 +8,8 @@ void main(){
   double numero = double.parse(num);
   
 
-  double dobro = numero! * 2;
-  double triplo = numero! * 3;
+  double dobro = numero * 2;
+  double triplo = numero * 3;
 
   print('O numero digitado foi ${numero}, o dobro e ${dobro} e o triplo ${triplo}');
 }

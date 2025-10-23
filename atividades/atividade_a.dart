@@ -1,10 +1,31 @@
+//Faça um programa que mostre a mensagem "Olá Mundo!" na tela.
+
 import 'dart:io';
 
-void main(){
-  stdout.write('Entre com uma frase: ');
-  String? frase = stdin.readLineSync();
+void main() {
+  while(true){
+    print('======= Boas vindas =======');
+    stdout.write('Digite uma frase ou pressione Enter para exibir olá mundo: ');
+    String? entrada = stdin.readLineSync();
 
-  frase = (frase == null || frase.isEmpty) ? 'Não informado' : frase;
+    if(entrada != null && entrada.isNotEmpty){
+      print('${entrada}');
+    }else{
+      print('Olá Mundo');
+    }
 
-  print(frase);
+    stdout.write('Deseja continua? (s/n) ');
+    String? escolha = stdin.readLineSync();
+
+    if(escolha == null || escolha.isEmpty){
+      print('Valor inválido');
+      continue;
+    }
+    if(escolha.toLowerCase() == 's'){
+      continue;
+    }else{
+      print('Programa finalizado!!!');
+      break;
+    }
+  }
 }

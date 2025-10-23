@@ -82,10 +82,11 @@ void main(){
     stdout.write('Entre com um valor: ');
     String? entrada = stdin.readLineSync();
 
+
     if(entrada != null && entrada.isNotEmpty){
       int? valor = int.tryParse(entrada); // AQUI TENTA FAZER O CASTING PARA int
       if(valor == null){ // AQUI NÃO FOI POSSÍVEL FAZER O CASTING
-        print('Valor inválido!');
+        print('Digite somente números!');
         continue;
       }else{ // AQUI FOI FEITO O CASTING
         if(valor % 2 == 0){

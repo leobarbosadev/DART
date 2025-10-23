@@ -1,7 +1,8 @@
 import 'dart:io';
 
 void main(){
-  stdout.write('Entre com o primeiro valor: '); // stdout permite escrever no final da frase, sem quebra de linha
+  while(true){
+stdout.write('Entre com o primeiro valor: '); // stdout permite escrever no final da frase, sem quebra de linha
   String? primeiroVal = (stdin.readLineSync()); //stdin.readLineSync() aguarda o usuário digitar e retorna o valor como uma string.
 
   stdout.write('Entre com o segundo valor: ');
@@ -30,5 +31,25 @@ void main(){
     print('-' * 50);
     print('Valores em branco, digite alguma coisa para realizarmos os calculos');
     print('-' * 50);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    stdout.write('Deseja continuar? (s/n) ');
+    String? escolha = stdin.readLineSync();
+
+    if(escolha != null && escolha.isNotEmpty){
+      
+    }
   }
 }
