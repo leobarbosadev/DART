@@ -85,7 +85,7 @@ void main(){
 
     if(entrada != null && entrada.isNotEmpty){
       int? valor = int.tryParse(entrada); // AQUI TENTA FAZER O CASTING PARA int
-      if(valor == null){ // AQUI NÃO FOI POSSÍVEL FAZER O CASTING
+      if(valor == null || entrada.isEmpty){ // AQUI NÃO FOI POSSÍVEL FAZER O CASTING
         print('Digite somente números!');
         continue;
       }else{ // AQUI FOI FEITO O CASTING
