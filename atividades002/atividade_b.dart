@@ -3,7 +3,8 @@ import 'dart:io';
 
 void main(){
   while(true){
-    stdout.write('Entre com um valor positivo para calcular seu fatorial: ');
+    print('=== CALCULAR FATORIAL ===');
+    stdout.write('Entre com um valor positivo: ');
     String? val = stdin.readLineSync();
 
     if(val != null && val.isNotEmpty){

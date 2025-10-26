@@ -4,6 +4,7 @@ import 'dart:io';
 
 void main(){
   while(true){
+    print('=== NÚMEROS PRIMOS ===');
     stdout.write('Entre com o valor inicial: ');
     String? val_1 = stdin.readLineSync();
 
