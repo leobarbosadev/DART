@@ -5,6 +5,7 @@ import 'dart:io';
 
 void main(){
    while(true){
+    print('=== CONVERTENDO ENERGIA ===');
     stdout.write('Entre com o valor em Joules: ');
     String? entrada = stdin.readLineSync();
 

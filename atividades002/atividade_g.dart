@@ -5,6 +5,7 @@ import 'dart:math';
 
 void main(){
    while(true){
+    print('=== SEQUÊNCIA DE POTÊNCIAS ===');
     stdout.write('Entre com um número inteiro: ');
     String? entrada = stdin.readLineSync();
 

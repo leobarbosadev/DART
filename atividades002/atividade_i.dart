@@ -4,6 +4,7 @@ import 'dart:io';
 
 void main(){
    while(true){
+    print('=== EXIBINDO ÂNGULOS ===');
     stdout.write('Entre com um ângulo: ');
     String? entrada = stdin.readLineSync();
 
@@ -28,7 +29,7 @@ void main(){
         }
       }
     }
-    
+
     print('');
     stdout.write('Desja continuar? (s/n) ');
     String? escolha = stdin.readLineSync();

@@ -4,6 +4,7 @@ import 'dart:io';
 
 void main(){
   while(true){
+    print('=== TABELA DE VELOCIDADES ===');
     stdout.write('Digite o tempo em segundos: ');
     String? entradaTempo = stdin.readLineSync();
 
