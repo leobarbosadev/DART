@@ -16,14 +16,14 @@ void main(){
       int? primeiroValor = int.tryParse(entrada_1);
       int? segundoValor = int.tryParse(entrada_2);
 
-      if(primeiroValor != null && segundoValor != null){
+      if(primeiroValor == null && segundoValor == null){
         print('Digite somente números');
+      }else{
         while(segundoValor != 0){
-          int resto = primeiroValor % segundoValor;
+          int resto = primeiroValor! % segundoValor!;
           primeiroValor = segundoValor;
           segundoValor = resto;
         }
-      }else{
         
       print('O MDC de ${entrada_1} e ${entrada_2} é ${primeiroValor}');
      }

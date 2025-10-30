@@ -12,7 +12,7 @@ void main(){
       int? angulo = int.tryParse(entrada);
 
       if(angulo == null){
-        print('Digite somente números:');
+        print('Digite somente números!');
       }else{
         if(angulo < 90){
           print('${angulo}° | ângulo agudo');
