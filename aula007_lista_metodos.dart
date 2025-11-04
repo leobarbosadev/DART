@@ -31,5 +31,20 @@ void main(){
   print('Lista nova: $listaDouble');
   print('-' * 70);
 
-  //insert: 
+  //insert -> insere um elemento em uma posição específica
+  List<String> listaArtistas = ['Fernanda Torres', 'Paulo José', 'Raul Cortez'];
+  print('Lista original: $listaArtistas');
+  listaArtistas.insert(2, 'Grande Otelo');
+  print('Após insert(2, "Grande Otelo"): $listaArtistas');
+  print('-' * 70);
+
+  //insertAll -> insere VÁRIOS elementos a partir de um índice
+  List<int> listaNumeros = [3, 4, 5];
+  print('Lista original: $listaNumeros');
+  listaNumeros.insertAll(0, [1, 2]);
+  print('Após insertAll(0, [1, 2]): $listaNumeros');
+  print('-' * 70);
+
+  //indexOf -> retorna o índice da PRIMEIRA ocorrência
+  
 }
