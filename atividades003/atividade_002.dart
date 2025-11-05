@@ -10,7 +10,7 @@ void main(){
   while(true){
   List<int> inteiroVariados = [3, 3, 4, 8, 7, 5, 2];
 
-  var inteirosUnicos = inteiroVariados.toSet();
+  var inteirosUnicos = inteiroVariados.toSet().toList();
 
   print('Nova lista: ${inteirosUnicos}');
   print('Total de elementos únicos: ${inteirosUnicos.length}');

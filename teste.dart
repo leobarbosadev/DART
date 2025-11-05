@@ -36,3 +36,11 @@ void main(){
     }
   }
 }
+
+
+// TESTE PARA CONTAR NUMEROS DUPLIADOS
+// for(numero in numeros){
+//     contador = 0;
+//     numero == numero
+//     contador +=1
+//   }
