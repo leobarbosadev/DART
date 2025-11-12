@@ -72,6 +72,4 @@ void main(){
     print('-' * 50);
     print('Valor em branco, digite um valor para calcular a área.');
   }
-
-  
 }
