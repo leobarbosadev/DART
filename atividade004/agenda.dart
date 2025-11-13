@@ -19,20 +19,18 @@ O quarto e último projeto integra todos os conceitos estudados em uma aplicaç�
 import 'dart:io';
 
 void main(){
-  // List<Map<String, String?>> agenda = [];
-  List<Map<String, String?>> agenda2 = [
-    {'nome' : 'Joao', 'telefone' : '88554477', 'email' : 'joao@teste.com'},
-    {'nome' : 'Maria', 'telefone' : '11223344', 'email' : 'maria@teste.com'}
-    ];
 
-  
+List<Map<String, String?>> agenda = [];
+
   print('=== AGENDA INTELIGENTE ===');
   while(true){
+    // print("\x1B[2J\x1B[0;0H");
     print('1 - Cadastrar');
     print('2 - Listar');
     print('3 - Buscar');
     print('4 - Atualizar');
     print('5 - Remover');
+    print('6 - Sair');
     stdout.write('Escolha uma opção: ');
     String? escolha = stdin.readLineSync();
 
@@ -41,6 +39,32 @@ void main(){
       switch(escolha){
         case '1':
           while(true){
+            stdout.write('Digite o nome: ');
+            String? nome = stdin.readLineSync();
+
+            if(nome == null || nome.isEmpty){
+            
+              print('Nome não pode ser nulo!!');
+              continue;
+            }else{
+            
+            String primeiraLetra = nome[0].toUpperCase();
+            String restoNome = nome.substring(1).toLowerCase();
+            String nomeFormatado = primeiraLetra + restoNome;
+
+            stdout.write('Digite o telefone: ');
+            String? telefone = stdin.readLineSync();
+            
+            stdout.write('Digite o email: ');
+            String? email = stdin.readLineSync();
+
+            telefone = (telefone == null || telefone.isEmpty) ? 'Não informado' : telefone;
+
+            email = (email == null || email.isEmpty) ? 'Não informado' : email;
+
+              agenda.add({'nome' : nomeFormatado, 'telefone' : telefone, 'email' : email});
+            }
+
             stdout.write('Deseja cadastrar mais contatos? (s/n) ');
             String? cadastro = stdin.readLineSync();
             if(cadastro!.toLowerCase() == 's'){
@@ -53,7 +77,7 @@ void main(){
 
         case '2':
           print('-'  * 70);
-          for (var pessoa in agenda2){
+          for (var pessoa in agenda){
             print('Nome: ${pessoa['nome']}');
             print('E-mail: ${pessoa['email']}');
             print('Telefone: ${pessoa['telefone']}');
