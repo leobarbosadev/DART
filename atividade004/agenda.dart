@@ -24,7 +24,6 @@ List<Map<String, String?>> agenda = [];
 
   print('=== AGENDA INTELIGENTE ===');
   while(true){
-    // print("\x1B[2J\x1B[0;0H");
     print('1 - Cadastrar');
     print('2 - Listar');
     print('3 - Buscar');
@@ -39,6 +38,8 @@ List<Map<String, String?>> agenda = [];
       switch(escolha){
         case '1':
           while(true){
+            print("\x1B[2J\x1B[0;0H");
+            print('== CADASTRO ==');
             stdout.write('Digite o nome: ');
             String? nome = stdin.readLineSync();
 
@@ -62,7 +63,8 @@ List<Map<String, String?>> agenda = [];
 
             email = (email == null || email.isEmpty) ? 'Não informado' : email;
 
-              agenda.add({'nome' : nomeFormatado, 'telefone' : telefone, 'email' : email});
+            agenda.add({'nome' : nomeFormatado, 'telefone' : telefone, 'email' : email});
+            print('Dados cadastrados com sucesso!!!');
             }
 
             stdout.write('Deseja cadastrar mais contatos? (s/n) ');
@@ -78,6 +80,19 @@ List<Map<String, String?>> agenda = [];
         case '2':
           print('-'  * 70);
           for (var pessoa in agenda){
+            print('Nome: ${pessoa['nome']}');
+            print('E-mail: ${pessoa['email']}');
+            print('Telefone: ${pessoa['telefone']}');
+            print('-'  * 70);
+          }
+            print('');
+        
+        case '3':
+          stdout.write('Digite o nome: ');
+          String? nome = stdin.readLineSync();
+          List<Map<String, String?>> filtroNome = agenda.where((cadastro) => cadastro.containsValue(nome)).toList();
+          print('-'  * 70);
+          for (var pessoa in filtroNome){
             print('Nome: ${pessoa['nome']}');
             print('E-mail: ${pessoa['email']}');
             print('Telefone: ${pessoa['telefone']}');
