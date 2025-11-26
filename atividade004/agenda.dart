@@ -39,7 +39,7 @@ List<Map<String, String?>> agenda = [
         case '1':
           while(true){
             print("\x1B[2J\x1B[0;0H");
-            print('== CADASTRO ==');
+            print('== CADASTRAR ==');
             stdout.write('Digite o nome: ');
             String? nome = stdin.readLineSync();
 
@@ -73,11 +73,14 @@ List<Map<String, String?>> agenda = [
               continue;
             }else{
               print('Dados cadastrados com sucesso');
+              print("\x1B[2J\x1B[0;0H");
               break;
             }
           }
 
         case '2':
+          print("\x1B[2J\x1B[0;0H");
+          print('== LISTAR ==');
           print('-'  * 70);
           for (var pessoa in agenda){
             print('Nome: ${pessoa['nome']}');
@@ -85,9 +88,13 @@ List<Map<String, String?>> agenda = [
             print('Telefone: ${pessoa['telefone']}');
             print('-'  * 70);
           }
-            print('');
+            stdout.write('Precione Enter para voltar para o menu');
+            stdin.readLineSync();
+            print("\x1B[2J\x1B[0;0H");
         
         case '3':
+          print("\x1B[2J\x1B[0;0H");
+          print('== BUSCAR ==');
           stdout.write('Digite o nome: ');
           String? nome = stdin.readLineSync();
           List<Map<String, String?>> filtroNome = agenda.where((cadastro) => cadastro.containsValue(nome)).toList();
@@ -98,11 +105,13 @@ List<Map<String, String?>> agenda = [
             print('Telefone: ${pessoa['telefone']}');
             print('-'  * 70);
           }
-            print('');
+            stdout.write('Precione Enter para voltar para o menu');
+            stdin.readLineSync();
+            print("\x1B[2J\x1B[0;0H");
 
         case '4':
           print("\x1B[2J\x1B[0;0H");
-          print('== ATUALIZANDO ==');  
+          print('== ATUALIZAR ==');  
           stdout.write('Digite o nome que deseja alterar os dados: ');
           String? nome = stdin.readLineSync();
           for (var item in agenda){
@@ -126,23 +135,34 @@ List<Map<String, String?>> agenda = [
                 print('Opção inválida');
                 break;
               }
+               print('Dados atualizados com sucesso');
+               print("\x1B[2J\x1B[0;0H");
             }  
           }
           
         case '5':
-          stdout.write('Digite o nome: ');
-          String? nome = stdin.readLineSync();
-          List<Map<String, String?>> filtroNome = agenda.where((cadastro) => cadastro.containsValue(nome)).toList();
-          print('-'  * 70);
-          for (var pessoa in filtroNome){
+          print("\x1B[2J\x1B[0;0H");
+          print('== REMOVER ==');
+
+          for (var pessoa in agenda){
             print('Nome: ${pessoa['nome']}');
             print('E-mail: ${pessoa['email']}');
             print('Telefone: ${pessoa['telefone']}');
             print('-'  * 70);
           }
-            agenda.remove(nome);
-            break;
-        
+
+          stdout.write('Digite o nome: ');
+          String? nome = stdin.readLineSync();
+          List<Map<String, String?>> filtroNome = agenda.where((cadastro) => cadastro.containsValue(nome)).toList();
+          print('-'  * 70);
+          
+            for (var pessoa in filtroNome) {
+            agenda.remove(pessoa);
+          }
+            print('Contato removido com sucesso.');
+            stdout.write('Precione Enter para voltar para o menu');
+            stdin.readLineSync();
+            print("\x1B[2J\x1B[0;0H");
 
         case '6':
           print('Programa finalizdo');
