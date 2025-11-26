@@ -14,13 +14,13 @@ O quarto e último projeto integra todos os conceitos estudados em uma aplicaç�
  consolidando o domínio da estrutura Map aplicada em um contexto realista.
  */
 
-//‘nome’, ‘telefone’ e ‘email’
-// menu - cadastrar, listar, buscar, atualizar e remover
 import 'dart:io';
 
 void main(){
 
-List<Map<String, String?>> agenda = [];
+List<Map<String, String?>> agenda = [
+  {'nome' : 'Tulio', 'telefone' : '8888', 'email' : 'tulio@teste'}
+];
 
   print('=== AGENDA INTELIGENTE ===');
   while(true){
@@ -99,6 +99,57 @@ List<Map<String, String?>> agenda = [];
             print('-'  * 70);
           }
             print('');
+
+        case '4':
+          print("\x1B[2J\x1B[0;0H");
+          print('== ATUALIZANDO ==');  
+          stdout.write('Digite o nome que deseja alterar os dados: ');
+          String? nome = stdin.readLineSync();
+          for (var item in agenda){
+
+            if (item.containsValue(nome)){
+              stdout.write('O que deseja alterar de ${nome}? (nome/telefone/email) ');
+              String? opcao = stdin.readLineSync();
+              if(opcao == 'nome'){
+                stdout.write('Digite o novo nome: ');
+                String? novoNome = stdin.readLineSync();
+                item['nome'] = novoNome;
+              } else if(opcao == 'telefone'){
+                  stdout.write('Digite o novo telefone: ');
+                  String? novoTelefone = stdin.readLineSync();
+                  item['telefone'] = novoTelefone;
+              }else if (opcao == 'email'){
+                stdout.write('Digite o novo email: ');
+                String? novoEmail = stdin.readLineSync();
+                item['email'] = novoEmail;
+              }else{
+                print('Opção inválida');
+                break;
+              }
+            }  
+          }
+          
+        case '5':
+          stdout.write('Digite o nome: ');
+          String? nome = stdin.readLineSync();
+          List<Map<String, String?>> filtroNome = agenda.where((cadastro) => cadastro.containsValue(nome)).toList();
+          print('-'  * 70);
+          for (var pessoa in filtroNome){
+            print('Nome: ${pessoa['nome']}');
+            print('E-mail: ${pessoa['email']}');
+            print('Telefone: ${pessoa['telefone']}');
+            print('-'  * 70);
+          }
+            agenda.remove(nome);
+            break;
+        
+
+        case '6':
+          print('Programa finalizdo');
+          break;
+
+        default:
+          print('Valor inválido');
       }
     }
   }
