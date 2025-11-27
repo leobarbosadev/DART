@@ -40,7 +40,7 @@ void main(){
     //Exibir cadastro
     exibirCadastro(
       funcionario: nomeFuncionario,
-      cargo: cargoFuncionario
+      cargo: cargoFuncionario,
       salario: salarioFuncionario
     );
 
@@ -55,7 +55,22 @@ void main(){
         break; // continua o loop principal
       } else if (resposta == 'n'){
         print('Fim do programa!');
+        return; //encerra o programa
+      }else{
+        print('Resposta inválida! Digite "s" para sim ou "n" para não. ');
       }
     }
   }
+}
+
+void exibirCadastro({
+  required String funcionario,
+  required String cargo,
+  required double salario,
+}) {
+  print('-' * 70);
+  print('Nome do funcionário: $funcionario');
+  print('Cargo: $cargo');
+  print('Salário: $salario');
+  print('-' * 70);
 }
