@@ -3,13 +3,11 @@
 //calcule a média aritmética das notas restantes. O resultado deve ser um número decimal (double).
 
 import 'dart:io';
-
-void main(){
-  while(true){
-    List<double> notas = [3.0, 3.0, 8.0, 10.0];
-
+    List<double> notas = [10.0, 3.0, 8.0, 2.0];
+    double somaNotas = 0;
     double menorNota = notas[0];
-  
+
+void descartarMenorNota({required List<double> notas}){ //void pq não tem return
     for( double nota in notas){
       if(nota < menorNota){
         menorNota = nota;
@@ -37,8 +35,12 @@ void main(){
       print('');
       print('Média das notas: ${media.toStringAsFixed(2)}');
 
+}
 
-
+void main(){
+  while(true){
+    descartarMenorNota(notas: notas);
+    
     print('');
     stdout.write('Desja continuar? (s/n) ');
     String? escolha = stdin.readLineSync();
