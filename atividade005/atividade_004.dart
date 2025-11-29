@@ -6,6 +6,8 @@
 import 'dart:io';
 
 
+void verificarImpar(){}
+
 void main(){
   while(true){
 
@@ -25,12 +27,6 @@ void main(){
       print('Lista original: $inteiros');
       print('Lista somente ímpar: $somenteImpar');
       print('Nova lista multiplicado por 2: $novaLista');
-
-
-
-
-
-
 
 
     print('');

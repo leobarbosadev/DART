@@ -48,9 +48,16 @@
 
 import 'dart:io';
 
+dynamic definir({required int numero,required int numero2}){
+
+  return numero;
+  // return "mensagem erro";
+}
+
+
 void main(){
 
-  List<Map<String, String?>> agenda = [];
+  // List<Map<String, String?>> agenda = [];
 
   stdout.write('Digite o nome:');
   String? nome = stdin.readLineSync();
@@ -61,7 +68,13 @@ void main(){
   stdout.write('Digite o email:');
   String? email = stdin.readLineSync();
 
-  agenda.add({'nome': nome!.trim(), 'telefone' : telefone, 'email' : email});
+  // print(definir(numero: telefone!, nome: nome!, email: email!));
+  // String resposta = definir(numero: telefone!, nome: nome!, email: email!);
+  num resposta = definir(numero2: 1, numero: 2);
+  resposta += 1;
+  print(resposta);
 
-  print(agenda);
+  // agenda.add({'nome': nome.trim(), 'telefone' : telefone, 'email' : email});
+
+  // print(agenda);
 }

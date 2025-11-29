@@ -3,16 +3,16 @@
 //calcule a média aritmética das notas restantes. O resultado deve ser um número decimal (double).
 
 import 'dart:io';
-    List<double> notas = [10.0, 3.0, 8.0, 2.0];
-    double somaNotas = 0;
-    double menorNota = notas[0];
 
 void descartarMenorNota({required List<double> notas}){ //void pq não tem return
+    //Encontra a menor nota
+    double menorNota = notas[0];  
     for( double nota in notas){
       if(nota < menorNota){
         menorNota = nota;
       }
     }
+      //Exibe todas as notas
       stdout.write('Todas as notas: ');
       notas.forEach((nota) => stdout.write('$nota, '));
 
@@ -20,16 +20,19 @@ void descartarMenorNota({required List<double> notas}){ //void pq não tem retur
       print('Menor nota descartada: ${menorNota}');
       print('');
       
+      //Remove a menor nota da lista
       notas.remove(menorNota);
 
+      //Calcula a soma das notas restantes
       double somaNotas = 0;
-
       for(double nota in notas){
         somaNotas += nota;
       }
-
+      
+      //Calcula a média
       double media = somaNotas / notas.length;
 
+      //Exibe as notas restantes e média
       stdout.write('Notas válidas: ');
       notas.forEach((nota) => stdout.write('$nota, '));
       print('');
@@ -38,7 +41,10 @@ void descartarMenorNota({required List<double> notas}){ //void pq não tem retur
 }
 
 void main(){
+      List<double> notas = [10.0, 3.0, 8.0, 2.0];
+
   while(true){
+    //Chama a função com as notas
     descartarMenorNota(notas: notas);
     
     print('');
