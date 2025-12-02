@@ -16,8 +16,8 @@ void main(){
     for(int numero in inteiros){
       if(numero % 2 != 0){
         int multiplicado = numero * 2;
-        somenteImpar.add(numero);
         novaLista.add(multiplicado);
+        somenteImpar.add(numero);
       }
     }
       novaLista.sort();
@@ -25,13 +25,6 @@ void main(){
       print('Lista original: $inteiros');
       print('Lista somente ímpar: $somenteImpar');
       print('Nova lista multiplicado por 2: $novaLista');
-
-
-
-
-
-
-
 
     print('');
     stdout.write('Desja continuar? (s/n) ');
