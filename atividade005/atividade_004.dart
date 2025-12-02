@@ -61,7 +61,7 @@ void main(){
       }
     }
 
-    verificarImpar(inteiros2: inteiros2); // 
+    verificarImpar(inteiros2: inteiros2); // PARÂMETRO: LISTA
 
     print('');
     stdout.write('Deseja continuar? (s/n) ');
