@@ -4,6 +4,11 @@
 import 'dart:io';
 import 'dart:math';
 
+
+void segundoMaior({
+  required List<int> listaInteiros}){
+
+}
 void main(){
   while(true){
     List<int> listaInteiros = [30, 7, 10, 10, 5, 2];

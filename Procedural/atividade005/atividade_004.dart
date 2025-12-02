@@ -7,7 +7,7 @@ import 'dart:io';
 
 
 verificarImpar({
-  required List<int> inteiros2,}){
+  required List<int> inteiros2}){
     
     List<int> novaLista = [];
     List<int> somenteImpar = [];
