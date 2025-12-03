@@ -7,8 +7,8 @@ import 'dart:io';
 
 void main(){
   while(true){
-    stdout.write('Quantos elementos quer inserir na lista?');
-    String? qtdElementos = stdin.readLineSync();
+    // stdout.write('Quantos elementos quer inserir na lista?');
+    // String? qtdElementos = stdin.readLineSync();
     
     List<int> inteiros = [2, 5, 8, 12, 15, 16, 22];
     int somaRestante = 0;

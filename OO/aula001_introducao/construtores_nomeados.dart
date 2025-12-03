@@ -26,19 +26,22 @@ class Produto{
 void main(){
   //Entrada de dados
   stdout.write('Digite o nome do produto: ');
-  String nome stdin.readLineSync() ?? 'Desconhecido';
+  String nome = stdin.readLineSync() ?? 'Desconhecido';
 
   //Pergunta o preço do produto
   stdout.write('Digite o preço do produto: ');
-  String preco double.tryParse(stdin.readLineSync() ?? '') ?? 00;
+  double preco = double.tryParse(stdin.readLineSync() ?? '') ?? 0.0;
 
   //Criação dos objetos usando diferentes construtores
 
+  //Produto criado com o construtor padrão (nome + preço)
   Produto p1 = Produto(nome, preco);
 
+  //Produto gratuito usando construtor nomeado
   Produto p2 = Produto.gratuito('Amostra Grátis');
 
-  Produto p3 Produto.oferta();
+  //Produto padrão usando construtor nomeado
+  Produto p3 = Produto.oferta();
 
   print('\nProdutos criado manualmente:');
   p1.exibir();
