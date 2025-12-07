@@ -76,7 +76,7 @@ void main(){
     print('A soma de $entradaNumero1 + $entradaNumero2 = $soma');
     print('A subtração de $entradaNumero1 - $entradaNumero2 = $subtracao');
     print('A multiplicação de $entradaNumero1 × $entradaNumero2 = $multiplicacao'); //tecla Alt + 0215 para símbolo de multiplicação
-    print('A divisão de $entradaNumero1 ÷ $entradaNumero2  $divisao'); //tecla Alt +  246 para símbolo de divisão
+    print('A divisão de $entradaNumero1 ÷ $entradaNumero2  ${divisao!.toStringAsFixed(2)}'); //tecla Alt +  246 para símbolo de divisão
     print('O resto de $entradaNumero1 ÷ $entradaNumero2  $resto');
     print('A divisão inteira de $entradaNumero1 ÷ $entradaNumero2 = $divisaoInteira');
     print('-' * 70);
