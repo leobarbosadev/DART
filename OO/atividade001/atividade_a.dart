@@ -53,7 +53,6 @@ class OperacoesMatematica{
 }
 
 void main(){
-  while(true){
     // print("\x1B[2J\x1B[0;0H");
     print('=== OPERAÇÕES BÁSICAS ===');
     stdout.write('Digite o primeiro número: ');
@@ -82,4 +81,3 @@ void main(){
     print('-' * 70);
 
   }
-}
