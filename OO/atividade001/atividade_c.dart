@@ -19,7 +19,7 @@ class Calcular{
     // }else{
     //   print('APROVADO');
     // }
-    // return media;
+    return media;
   }
 }
 
