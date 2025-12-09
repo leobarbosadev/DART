@@ -20,6 +20,7 @@ class Calcular{
 }
 
 void main(){
+  print('=== SUA IDADE ===');
   stdout.write('Digite o ano de nascimento: ');
   int ano = int.parse(stdin.readLineSync()!);
 
