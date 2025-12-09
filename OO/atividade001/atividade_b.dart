@@ -12,8 +12,10 @@ class Calcular{
   });
 
   //Método para calcular a idade
-  calcularIdade({required int anoAtual}){
-    return anoAtual - anoNascimento;
+  calcularIdade(){
+    int anoAtual = DateTime.now().year;
+    int idade = anoAtual - anoNascimento;
+    return idade;
   }
 }
 
@@ -22,9 +24,8 @@ void main(){
   int ano = int.parse(stdin.readLineSync()!);
 
   //Instanciando o objeto
-  Calcular idade = Calcular(anoNascimento: ano);
+  Calcular calcular = Calcular(anoNascimento: ano); // O calcular pode ser qualquer nome (o que está com letra minúscula)
+  int idade = calcular.calcularIdade();
 
-  int exibirIdade = idade.calcularIdade(anoAtual: DateTime.now().year);
-
-  print('Sua idade é ${exibirIdade} anos');
+  print('Sua idade é ${idade} anos');
 }
