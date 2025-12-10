@@ -45,36 +45,102 @@
 //     contador +=1
 //   }
 
+// import 'dart:io';
 
-import 'dart:io';
+// class Calcular{
+//   //Atributos
+//   List<double> lista_notas;
+//   //Método construtor com parâmetros nomeados
+//   Calcular({ //Método construtor tem que ser o mesmo nome que a classe
+//     required this.lista_notas,
+//   });
 
-dynamic definir({required int numero,required int numero2}){
+//   //Método para calcular a méda
+//   calcularMedia(){
+//     double soma = lista_notas.reduce((a, b) => a + b); // Realiza a soma de todos os elementos da lista
+//     double media = soma / lista_notas.length;
+//     // return media;
+//       print('=' * 50);
+//       print('A média das notas é ${media.toStringAsFixed(2)}');
+//       print('=' * 50);
+//   }
+// }
 
-  return numero;
-  // return "mensagem erro";
-}
+// void main(){
+//   print('=== MÉDIA DE NOTAS ===');
+//   List<double> lista = [];
+//   for(int i = 1 ; i <= 4; i++){
+//     stdout.write('Digite a ${i}ª nota: ');
+//     double nota = double.parse(stdin.readLineSync()!);
+//     lista.add(nota);
+//   }
+//   print('-' * 50);
+//   int i = 1;
+//   for(var nota in lista){
+//     print('${i++}ª nota: $nota');
+//     // print('-' * 50);
+//   }
 
 
-void main(){
+//   //Instanciando o objeto(classe)
+//   // Calcular notas = Calcular(lista_notas: lista);
+//   Calcular notas = Calcular(lista_notas: lista);
+//   notas.calcularMedia();
+// }
 
-  // List<Map<String, String?>> agenda = [];
 
-  stdout.write('Digite o nome:');
-  String? nome = stdin.readLineSync();
 
-  stdout.write('Digite o telefone:');
-  String? telefone = stdin.readLineSync();
+// import 'dart:io';
 
-  stdout.write('Digite o email:');
-  String? email = stdin.readLineSync();
+// class Calcular{
+//   //Atributos
+//   List<double> lista_notas;
+//   //Método construtor com parâmetros nomeados
+//   Calcular({ //Método construtor tem que ser o mesmo nome que a classe
+//     required this.lista_notas,
+//   });
 
-  // print(definir(numero: telefone!, nome: nome!, email: email!));
-  // String resposta = definir(numero: telefone!, nome: nome!, email: email!);
-  num resposta = definir(numero2: 1, numero: 2);
-  resposta += 1;
-  print(resposta);
+//   //Método para calcular a méda
+//   calcularMedia(){
+//     double soma = lista_notas.reduce((a, b) => a + b); // Realiza a soma de todos os elementos da lista
+//     double media = soma / lista_notas.length;
+   
+//     return media;
+//   }
 
-  // agenda.add({'nome': nome.trim(), 'telefone' : telefone, 'email' : email});
+//   situacao(media){
+//     if(media < 6){
+//       // print('REPROVADO');
+//       return 'REPROVADO';
+//     }else{
+//       // print('APROVADO');
+//       return 'APROVADO';
+//     }
+//   }
+// }
 
-  // print(agenda);
-}
+// void main(){
+//   List<double> lista = [];
+//   for(int i = 1 ; i <= 4; i++){
+//     stdout.write('Digite a ${i}ª nota: ');
+//     double nota = double.parse(stdin.readLineSync()!);
+//     lista.add(nota);
+//   }
+//   print('-' * 50);
+//   int i = 1;
+//   for(var nota in lista){
+//     print('${i++}ª nota: $nota');
+//     // print('-' * 50);
+// }
+
+
+//   //Instanciando o objeto(classe)
+//   Calcular notas = Calcular(lista_notas: lista);
+//   double mostar_media = notas.calcularMedia();
+//   String mencao = notas.situacao(mostar_media);
+
+//   print('=' * 50);
+//   print(mencao);
+//   print('A média das notas é ${mostar_media.toStringAsFixed(2)}');
+//   print('=' * 50);
+// }

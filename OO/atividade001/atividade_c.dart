@@ -24,7 +24,6 @@ class Calcular{
 }
 
 void main(){
-  print('=== MÉDIA DE NOTAS ===');
   List<double> lista = [];
   for(int i = 1 ; i <= 4; i++){
     stdout.write('Digite a ${i}ª nota: ');
@@ -37,7 +36,6 @@ void main(){
     print('${i++}ª nota: $nota');
     // print('-' * 50);
 }
-
 
   //Instanciando o objeto(classe)
   Calcular notas = Calcular(lista_notas: lista);
