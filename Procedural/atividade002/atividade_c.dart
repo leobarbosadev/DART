@@ -27,6 +27,7 @@ void main() {
           print('A soma dos múltiplos de 3 e 5 menores que ${valor} = ${soma}');
       }
     }
+    
     print('');
     stdout.write('Desja continuar? (s/n) ');
     String? escolha = stdin.readLineSync();

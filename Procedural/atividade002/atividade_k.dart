@@ -28,6 +28,7 @@ void main(){
       print('O MDC de ${entrada_1} e ${entrada_2} é ${primeiroValor}');
      }
     }
+    
     print('');
     stdout.write('Desja continuar? (s/n) ');
     String? escolha = stdin.readLineSync();

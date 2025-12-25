@@ -34,6 +34,7 @@ void main(){
     } else{
       print('Valores inválidos, digite somente números');
     }
+    
     print('');
     stdout.write('Desja continuar? (s/n) ');
     String? escolha = stdin.readLineSync();

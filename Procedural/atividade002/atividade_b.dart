@@ -22,6 +22,7 @@ void main(){
         print('${valor}! = ${fatorial}');
       }
     }
+    
     print('');
     stdout.write('Desja continuar? (s/n) ');
     String? escolha = stdin.readLineSync();
